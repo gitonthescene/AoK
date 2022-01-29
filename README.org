@@ -1,0 +1,4 @@
+As an exercise in learning K I'm going to try to do as many [[https://adventofcode.com/][Advent of Code]] problems as I can in K.
+
+There are several variants out there, but I got started with [[https://github.com/kevinlawler/kona/wiki][kona]].  I'll probably explore other
+variants eventually.  I'll try to make it clear when I'm doing that.
