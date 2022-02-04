@@ -1,3 +1,5 @@
+/ This is shakti K
+
 txt:0:"day14.txt"
 r:(`n$'+2#r)!`n$'+-1#r:+l:(2_txt)@\:0 1 6
 n:(k!(#k:`n$',/(l,/:\:l:?,/l))#0),#'=`n$1_,':|txt@0
