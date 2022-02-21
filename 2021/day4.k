@@ -1,20 +1,16 @@
+/ works in tio, but seems to be an issue in the current kona; [[https://github.com/kevinlawler/kona/issues/622]]
+/ This is the part that's not working: {|/(&/)+x,+x}'10 5 5#(10*5*5) _draw 2
+
 data:0:`day4.txt
 call:0$'","\data 0
-data:2_ data
+nc:#call
+bds:{x@&~0N=x}''(0$" "\'1_)'(&0=#:'d)_ d:1_ data
+st:((#bds;5;5)#0;call;&#bds)
+pl:{{w:&~z;n:@[x;w;:;{x[z]|((*y)=)'bds[z]}[x;y]'w];(n;1_ y;@[z;w;:;(nc-#y)* {|/(&/)+x,+x}'n@w])}@/x}
 
-bds:{c:0=#:'x;(1+#&c;5)#{0$'l@&:~0=#:'l:" "\x}'x@&~c}data
-st:((#bds;5;5)#0;0,call)
-pl:{{({x[z]|((*1_ y)=)'bds[z]}[x;y]'!#bds;1_ y)}@/x}
-/ wn:{|/(|/(&)/')'(x;+x)}
-/ workaround.  above should work
-wn:{|//{(|/(&)/')'(x;+x)}x}
-
-r:{~|/wn'*x}pl/st
-
-(**|r)*+//(bds*~*r)@&wn'*r
-
-st:(st;(#bds)#0)
-r:{|/~*|x}{r:pl[*x];(r;(*|x)|(#r@1)*wn'*r)}/st;
-
-(**|*r)*+//(bds*~**r)@&(&/*|r)=*|r
+r:{~&/x@2}pl/st
+sc:bds*~r[0]
+c:{*(call@r[2][x])*+//sc[x]}
+i:{&(x/r@2)=r@2}
+c'i'(&;|)
 \\
