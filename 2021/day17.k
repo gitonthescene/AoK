@@ -6,6 +6,6 @@
 xh:+</xr>\:r:+\+0|(!250)-\:!250
 yh:+</yr>\:r:+\+((*yr)+!250)-\:!250
 ix:,/(!#xh),\:/:!#yh
-#ix@&{|/r:xh[x]&yh[y]}.'ix
-mxy:(*yr)+|/*|+ix@&{|/r:xh[x]&yh[y]}.'ix
+#s:ix@&{|/r:xh[x]&yh[y]}.'ix
+mxy:(*yr)+|/*|+s
 _mxy+(mxy*mxy-1)%2
