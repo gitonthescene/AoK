@@ -1,3 +1,4 @@
+/ ngn/k
 data:0:"day18.txt"
 rot:{1_x,1#x}
 
