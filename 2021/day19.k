@@ -18,7 +18,7 @@ bv:{{x-y}.'(x)}'(2#''pts:{s.(x)}'''(+'+''(,'mp:ix[ot]),/:',''pts:(+&)'ov@ot))
 / which transformation applies in the forwards and backwards directions
 tf:+{{&{&/x='y}[y]'mm[;x]'tr}.(x)}''(bv;|'bv)
 
-/ which conversions between scanners is possible
+/ which conversions between scanners are possible
 cm:(*|cv)@=*cv:+mp,|'mp
 
 / conversion
