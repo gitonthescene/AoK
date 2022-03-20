@@ -1,4 +1,6 @@
 T:0:"day23.txt"
+ix:,/|(,7#i),0N 4#7_i:&,/.[^" #"?T;(1;3 5 7 9);:;0]
+sh:{`0:"\n",0N 13#@[,/T;ix;:;(".",t)@x]}
 
 / steps between home and corridor and vice versa
 hw:(0 1;2;3;4;5 6)
@@ -7,41 +9,41 @@ pb:{(|'(!#x)_\:x),(1+!#y)#\:y}.',/''(0,/:1+!4)_\:hw
 hcpb:{,/|{y,/:'x}\[pb+x*4;|((4*!x)+\:!4)]}
 hcdb:{,/|(!x)+\:db}
 
-
 wt:3(10*)\1
-
 mv:{@[x;2#y;:;0,x@*y]}
 
 / see who's home
-ih:{0N 4#(4!!x)=hm@y@!x}
-
-/ valid move with index into cost table
-mi:{V:(*:';(:/)')@\:.[P;]'+I:&1=+/''~~y@P:hcp;(V;+I)}
+ih:{(4!!x)=hm@y@!x}
 
 / calc cost
-cc:{[V;I;i;s;c](c+(.[hcd;]'I)*wt@hm@|/s@V)@i}
+cc:{[V;I;s;c]c+(.[hcd;]'I)*wt@hm@|/s@V}
 
-/ move from home to corridor
-hc:{[d;s;c](V;I):mi[d;s];i:&s[*V]&~(H:,/&\ih[d;s])@*V;$[#i;::;&/H;:+,(s;c);:()];(mv[s]@/:(0;d)+/:I@i;cc[V;I;i;s;c])}
+hd:{,/(g@&~^g:.[uu;]'((*&)'+|0N 4#y[!x]&~z&(0=#&~)'z@(u@!8)),'!4),/:\:&~y[x+!7]}
+tl:{,/(((!#g)+4*((-4!x)-1)-g)@&~^g:(*|&)'+|0N 4#~y[!x]),/:\:&~~y[x+!7]}
+vl:{i:tl[x;y];$[~#i;:(();());];I:&((0=#&~)'z@(u@*)'P)&((4!*'P)=hm@y@(*|)'P)&1=+/'~~y@P:.[hcp;]'i;((*:';(:/)')@\:P@I;i@I)}
 
-/ move from corridor to home
-b:,&0,4
-ch:{[d;s;c](V;I):mi[d;s];i:&((4!*V)=hm@s[*|V])&(,/|1_<\(|ih[d;s]),b)@*V;$[~#i;:+,(s;c);];(mv[s]@/:|'(0;d)+/:I@i;cc[V;I;i;s;c])}
+ch:{(V;I):vl[x;y;H:ih[x;y]];$[~#I;:+,(y;z);];(mv[y]@/:|'(0;x)+/:I;cc[V;I;y;z])}
+hc:{i:hd[8;y;H:ih[x;y]];$[#i;::;&/H;:+,(y;z);:()];I:&1=+/'~~y@P:.[hcp;]'i;(mv[y]@/:(0;x)+/:I;cc[;;y;z]@/(V;I):((*:';(:/)')@\:P@I;i@I))}
 
 mh:{r:{+{[r;d;s;c]r,+ch[d;s;c]}/[();x;y@0;y@1]}[x]/[+,(y;z)];(!r;.r:&/'r[1]@=r[0])}
 mc:{{r:{+{[r;d;s;c]r,+mh[d;s;c]}/[();x;y@0;y@1]}[x;y];(!r;.r:&/'r[1]@=r[0])}[x;hc[x;y;z]]}
-slv:{r:{+{[r;d;s;c]r,+mc[d;s;c]}/[();x;y@0;y@1]}[x;y];(((15#9)\)@/:!r;.r:&/'r[1]@=((15#9)/)@/:r[0])}
+slv:{r:{+{[r;d;s;c]r,+mc[d;s;c]}/[();x;y@0;y@1]}[x;y];(.*'r[0]@g;.&/'r[1]@g:=((15#9)/)@/:r[0])}
 
 / initial state
 st:@[&15;!8;:;1+!8]
-hm:0N,(,/t:.[T;(3 2;3 5 7 9)])-"A"
+hm:0N,(t:,/.[T;(3 2;3 5 7 9)])-"A"
 hcp:hcpb@2
 hcd:hcdb@2
-&/*|slv[8]/(+,(st;0))
+u:{(4!c)+4*-:1+!--4!c:x}@/:!8
+uu:+{(4!c)+4*-:1+!--4!c:x}@/:8+!4
 
+
+&/*|slv[8]/(+,(st;0))
 st:@[&23;!16;:;1+!16]
 hm:?[hm;5;,/("DBAC";"DCBA")-"A"]
 hcp:hcpb@4
 hcd:hcdb@4
+u:{(4!c)+4*-:1+!--4!c:x}@/:!16
+uu:+{(4!c)+4*-:1+!--4!c:x}@/:16+!4
 \\
 &/*|slv[16]/(+,(st;0))
