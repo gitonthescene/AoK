@@ -5,6 +5,6 @@
 / experimented with ranges by hand.  min y velocity is clearly *yr
 xh:+</xr>\:+\+0|(!250)-\:!250
 yh:+</yr>\:+\+((*yr)+!250)-\:!250
-#s:+(#yh;#xh)\&,/xh(|/&)/:\:yh
-mxy:(*yr)+|/*|+s
+#*s:(#yh;#xh)\&,/xh(|/&)/:\:yh
+mxy:(*yr)+|/*|s
 _mxy+(mxy*mxy-1)%2
