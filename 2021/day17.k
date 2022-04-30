@@ -3,9 +3,8 @@
 (xr;yr):0 1+/:.''".."\'r@&1<#'r:1_'(l:0,&~</45 58>\:x+0)_x:*0:"day17.txt"
 
 / experimented with ranges by hand.  min y velocity is clearly *yr
-xh:+</xr>\:r:+\+0|(!250)-\:!250
-yh:+</yr>\:r:+\+((*yr)+!250)-\:!250
-ix:,/(!#xh),\:/:!#yh
-#s:ix@&{|/r:xh[x]&yh[y]}.'ix
+xh:+</xr>\:+\+0|(!250)-\:!250
+yh:+</yr>\:+\+((*yr)+!250)-\:!250
+#s:ix@&{|/xh[x]&yh[y]}.'ix:+!#'(yh;xh)
 mxy:(*yr)+|/*|+s
 _mxy+(mxy*mxy-1)%2
