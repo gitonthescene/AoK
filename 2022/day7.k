@@ -10,7 +10,7 @@ prs:{$["$ cd .."~x;d::p@d
      ]}
 prs'1_0:"day7.txt";
 
-szs:{@[x;y;+;z]}/[&#s;@[p;]\'!#p;s]
+szs:@[;;+;]/[&#s;@[p;]\'!#p;s]
 +/(~100000<)#szs
 unused:70000000-*szs
 req:30000000-unused
