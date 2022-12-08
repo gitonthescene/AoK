@@ -1,14 +1,17 @@
-pwd:`!,""
+p:,0
+s:,0
+c:,0
+f:,0
+d:0
+prs:{$["$ cd .."~x;d::p@d
+     "$ cd"~4#x;[c[d]::c[d]-1;d::f[d]-c[d]]
+     "dir"~3#x;[f[d]::#p;p::p,d;s::s,0;c::c,0;f::f,0;c[d]::c[d]+1]
+     ~"0:"'*x;s[d]::s[d]+`I$*" "\x
+     ]}
+prs'1_0:"day7.txt";
 
-cd:{$[x~,"/";pwd::`$"";x~"..";pwd::`$"/"/-1_"/"\$pwd;pwd::`$($pwd),"/",x];@[y;pwd;:;$[^(!y)?pwd;();y[pwd]]]}
-prs:{$["$ cd"~4#y;x:cd[*1_" "\2_y;x];"$"~*y;x;x[pwd]::x[pwd],,y];x}
-szl:{(x;y);$["dir"~*y;sz[`$($x),"/",y@1];0^`I$*y]}
-sz:{+/szl[x]'" "\'dirs[x]}
-dirs:prs/[`!();0:"day7.txt"]
-
-/+(!dirs;.dirs)
-
-+/(~100000<)#szs:sz'!dirs
-unused:70000000-sz@`""
+szs:{@[x;y;+;z]}/[&#s;@[p;]\'!#p;s]
++/(~100000<)#szs
+unused:70000000-*szs
 req:30000000-unused
 &/(~req>)#szs
