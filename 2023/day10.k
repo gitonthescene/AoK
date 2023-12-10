@@ -2,7 +2,7 @@ I:0:"day10.txt"
 
 .[I;(*+&"S"=I)+\:-1+!4]          / visualize to figure out what start character is
 
-/      F     -     7    |     L      J
+/      F     -     7     |     L     J
 P:+((0 0 0;0 0 0;0 0 0;0 1 0;0 1 0;0 1 0;0 0 0)
     (0 1 1;1 1 1;1 1 0;0 1 0;0 1 1;1 1 0;0 0 0)
     (0 1 0;0 0 0;0 1 0;0 1 0;0 0 0;0 0 0;0 0 0))
@@ -14,7 +14,6 @@ d:sh@M0:,/'+,'/P@s^"F-7|LJ."?I
 M:1&,/M0
 D:d/'(,/-:\|=2) /ESWN
 B:d/(1+3**+&"S"=I)
-
 
 B2:*(M@)#B+/:D                   / next steps.  pick one
 
