@@ -11,8 +11,8 @@ m:+,/{+r@'2#&~^?\:/B@/:r:(=b;=h+b)@\:x}'?b / match tops to bottoms
 (#I)-#tpl:?,/tb@&1=#'?'tb:(*|m)@=*m        / boxes supported by only one box may topple
 bt:(*m)@=*|m
 g:{(?(^:)_,/bt@n;?(*|x),n:(&/'~^(*|x)?tb@)#*x)}' / find which boxes supported only by which boxes
-eee:g/(|1(,/bt@)\,:)'tpl                         / recursively
-+/#'1_'*|+eee                                    / only count other boxes
+t:g/(|1(,/bt@)\,:)'tpl                           / recursively
++/#'1_'*|+t                                      / only count other boxes
 
 / Alternative model for falling brings
 / Don't reorder.  Drop everything simultaneously
