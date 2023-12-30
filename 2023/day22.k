@@ -1,5 +1,5 @@
 I:0:"day22.txt"
-I:.''d(d:,/$!10)?"~"\'I
+I:II:.''d(d:,/$!10)?"~"\'I
 I:I@<I[;0;2]
 S:|/,/0 1+/:2#''I
 sh:`0:(,"--")," "/'$/|1(-:1+|/#',/)\$:
@@ -14,3 +14,13 @@ bt:(*m)@=*|m
 g:{(?(^:)_,/bt@n;?(*|x),n:(&/'~^(*|x)?tb@)#*x)}' / find which boxes supported only by which boxes
 eee:g/(|1(,/bt@)\,:)'tpl                         / recursively
 +/#'1_'*|+eee                                    / only count other boxes
+
+/ Alternative model for falling brings
+/ Don't reorder.  Drop everything simultaneously
+bk:(SZ:1+2|//I)/''(++/(!--)\0 1+)'II
+u:(&=/1&/\)'(*|SZ)!bk  / Underside of each brick
+fld:{y-(~|/'1=(*|SZ)!y)&&/'^(,/y)?-1+y@'x}
+l:fld[u]/bk
+
+/ All the bricks land in the same spot as above model (offset by 1)
+(b+1)~(&/'(*|SZ)!l)II?I
