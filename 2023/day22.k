@@ -6,9 +6,8 @@ sh:`0:(,"--")," "/'$/|1(-:1+|/#',/)\$:
 
 B:S/'(+/(!--)\0 1+2#')'I
 f:{(b;@[*|x;y;:;z+b:|/0^x[1;y]])}          / track highest height per landing spot
-b:*+f\[(0N;(*/S)#!0);B;1+-/|+I[;;2]]       / as well as where each box lands
-t:b+1+-/|+I[;;2]                           / the top of each box
-m:+,/{+r@'2#&~^?\:/B@/:r:(=b;=t)@\:x}'?b   / match tops to bottoms
+b:*+f\[(0N;(*/S)#!0);B;h:1+-/|+I[;;2]]     / as well as where each box lands
+m:+,/{+r@'2#&~^?\:/B@/:r:(=b;=h+b)@\:x}'?b / match tops to bottoms
 (#I)-#tpl:?,/tb@&1=#'?'tb:(*|m)@=*m        / boxes supported by only one box may topple
 bt:(*m)@=*|m
 g:{(?(^:)_,/bt@n;?(*|x),n:(&/'~^(*|x)?tb@)#*x)}' / find which boxes supported only by which boxes
