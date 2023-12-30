@@ -16,7 +16,7 @@ t:g/(|1(,/bt@)\,:)'tpl                           / recursively
 
 / Alternative model for falling brings
 / Don't reorder.  Drop everything simultaneously
-bk:(SZ:1+2|//I)/''(++/(!--)\0 1+)'II
+bk:(SZ:1+2|//II)/''(++/(!--)\0 1+)'II
 u:(&=/1&/\)'(*|SZ)!bk  / Underside of each brick
 fld:{y-(~|/'1=(*|SZ)!y)&&/'^(,/y)?-1+y@'x}
 l:fld[u]/bk
