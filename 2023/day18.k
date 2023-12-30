@@ -27,7 +27,7 @@ f:{p:++\x*O@y             / points
    M:2*!'#'P              / indices of unique points expanded by 2
    m0:ml[1(0 1')\+1_-':,/1(,*:)\+2*P?'p]                    / make loop w/ coordinates with indices (i.e. model of the data)
    i:ci[s;@[&+/*/s;(s:1+|/'m0)/m0;:;1]]                     / plot loop/calc interior
-   i:s#@[&*/s;(s:s+1)/1 0+&i;:;1]                           / expand a bit
+   i:s#@[&*/s;(s:s+1)/1 0+&i;:;1]                           / make room for completed quadrants
    j:(i).[;;:;1]/(,/+'(0 1;-1 0;-1 1)+\:&i)                 / complete quadrants
    cnt:+/{*/-/+x@'+|1(1+)\y{x'y}'z}[P;M]'+@\:/1(&&/2!)\&j   / count area of points in model with distances in the original
    dd:x@&|/y=/:0 1                                          / adjustment for completed quadrants
