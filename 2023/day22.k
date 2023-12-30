@@ -5,7 +5,7 @@ S:|/,/0 1+/:2#''I
 sh:`0:(,"--")," "/'$/|1(-:1+|/#',/)\$:
 
 B:S/'(+/(!--)\0 1+2#')'I
-f:{(hs;ds):x;(b;@[ds;y;:;z+b:|/0^ds[y]])}  / track highest height per landing spot
+f:{(b;@[*|x;y;:;z+b:|/0^x[1;y]])}          / track highest height per landing spot
 b:*+f\[(0N;(*/S)#!0);B;1+-/|+I[;;2]]       / as well as where each box lands
 t:b+1+-/|+I[;;2]                           / the top of each box
 m:+,/{+r@'2#&~^?\:/B@/:r:(=b;=t)@\:x}'?b   / match tops to bottoms
