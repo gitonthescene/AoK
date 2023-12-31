@@ -23,7 +23,7 @@ p,:tr'3,/:S/|+(1+!l),\:l
 / forks
 f:tr',/1 3,/:\:&4=I
 f,:tr',/0 2,/:\:&5=I
-ft:f@=*|+*'f              / fork head -> fork tails
+ft:f@=*|+*'f              / fork head -> fork trails
 
 / match ends of paths, avoid repeating
 ps:{&*|{((x[1]@)_?(^:)_2(*|:)'/,/ft[*x];@[;;:;1].|x)}/(,*|*|x;&#I)}'p
