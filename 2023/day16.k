@@ -17,7 +17,7 @@ h,:,/(4*&"|"=C@I)+/:3 1                               / vert forks
 nxt:{(p;-p-x+D@p:4!x)}                                / next pos/dir
 stp:{(d;n):nxt@x;$[^d:T[d;I@-4!n];d;n+d]}             / redirect
 
-parts:{*|(#*:){(((^:)_,/x@*y)^y[1];,/y)}[x]/(,*y;!0)} / paths up to split/edge
+parts:{*|(#*:){(((^:)_,/x@*y)^y[1];,/y)}[x]/(,*y;!0)} / connected paths
 cnt:{#?(~:I@)_-4!,/x[y]}                              / count unique positions
 
 p:(^:)_/:h,'({~(^x)|~I@-4!x}stp\stp@)'h   / paths
