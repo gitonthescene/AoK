@@ -4,26 +4,30 @@ I:(C:" ./\\|-")?4(|+" ",)/I
 D:4*(S:-1_#'*:\I)/',/-:\|=2 / ESWN
 I:,/I
 
-T:(0 0 3 1 0N 0
-   1 1 2 0 1  0N
-   2 2 1 3 0N 2
-   3 3 0 2 3  0N)
+T:(0N 0 3 1 0N 0
+   0N 1 2 0 1  0N
+   0N 2 1 3 0N 2
+   0N 3 0 2 3  0N)
 
-/ headings
-h:b:,/0 2 1 3+4*S/'',/1(|:'')\(1+!s),\:/:(0,s:*-1+S)  / from edges
-h,:,/(4*&"-"=C@I)+/:2 0                               / horiz forks
-h,:,/(4*&"|"=C@I)+/:3 1                               / vert forks
+NP:(!#I)+/:S/+,/-:\|=2    / next position
+ND:.[T;]''(!4),/:\:I      / next direction
 
-nxt:{(p;-p-x+D@p:4!x)}                                / next pos/dir
-stp:{(d;n):nxt@x;$[^d:T[d;I@-4!n];d;n+d]}             / redirect
+tr:{(~^*:){(ND[x[0];n];n:.[NP;x])}\x}   / trace point
 
-parts:{*|(#*:){(((^:)_,/x@*y)^y[1];,/y)}[x]/(,*y;!0)} / connected paths
-cnt:{#?(~:I@)_-4!,/x[y]}                              / count unique positions
+/ paths
+p:tr'0,/:S/'(1+!l:S[0]-2),\:0
+p,:tr'1,/:S/|+(1+!l),\:0
+p,:tr'2,/:S/+(1+!l),\:l
+p,:tr'3,/:S/|+(1+!l),\:l
 
-p:(^:)_/:h,'({~(^x)|~I@-4!x}stp\stp@)'h   / paths
-f:(p@=-4!*'p)_-4!b                        / forks
-hp:!/|1*:'\p                              / head -> path
-ht:(*'p)!*''f@-4!*|+nxt'(*|)'p            / head -> tail
+/ forks
+f:tr',/1 3,/:\:&4=I
+f,:tr',/0 2,/:\:&5=I
+ft:f@=*|+*'f              / fork head -> fork tails
 
-*c:cnt[hp]'parts[ht]'hp@b
+/ match ends of paths, avoid repeating
+ps:{&*|{((x[1]@)_?(^:)_2(*|:)'/,/ft[*x];@[x[1];x[0];:;1])}/(,*|*|x;&#I)}'p
+*c:#'(^:)_/:(~I@)_/:?',//'((*|+1_-1_)'p),'(*|+-1_)'''ft@(~I@)_/:ps
 |/c
+
+
