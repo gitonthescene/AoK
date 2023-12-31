@@ -15,10 +15,10 @@ ND:.[T;]''(!4),/:\:I      / next direction
 tr:{(~^*:){(ND[x[0];n];n:.[NP;x])}\x}   / trace point
 
 / paths
-p:tr'0,/:S/'(1+!l:S[0]-2),\:0
-p,:tr'1,/:S/|+(1+!l),\:0
-p,:tr'2,/:S/+(1+!l),\:l
-p,:tr'3,/:S/|+(1+!l),\:l
+p:tr'0,/:S/'(s:1+!l:S[0]-2),\:0
+p,:tr'1,/:S/|+s,\:0
+p,:tr'2,/:S/+s,\:l
+p,:tr'3,/:S/|+s,\:l
 
 / forks
 f:tr',/1 3,/:\:&4=I
