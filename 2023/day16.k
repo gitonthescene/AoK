@@ -15,7 +15,7 @@ ND:.[T;]''(!4),/:\:I      / next direction
 tr:{(~^*:){(ND[x[0];n];n:.[NP;x])}\x}   / trace point
 
 / paths
-p:tr'0,/:S/'(s:1+!l:S[0]-2),\:0
+p:tr'0,/:S/+(s:1+!l:S[0]-2),\:0
 p,:tr'1,/:S/|+s,\:0
 p,:tr'2,/:S/+s,\:l
 p,:tr'3,/:S/|+s,\:l
