@@ -32,7 +32,6 @@ N:(!#T)+/:d/-1+!3 3
 / faster
 fst:{-1_x&1_(~(*x)=':x,:0),0}
 fl:|/(fst;|fst@|:)@\:
-ci:{(~x#y)&((~=)\)'&':fl'x#y}                           / calc interior (sweeps, but flood should work)
+ci:{(~x#y)&((~=)\)'&':fl'x#y}
 
 +//.[ci[sh L0;,/L0];1+3*!'-3!d]
-
