@@ -12,8 +12,8 @@ T:D/+,/(!4),/:'+N       / forward (transition)
 TR:T@D/4 0!'-1 0+D\!#T  / turn right
 TL:T@D/4 0!' 1 0+D\!#T  / turn left
 
-cx:{?/:/(&I=x;y@'&'x=I@y)}
-dis:{*|(#*:)({(y^r;z,,(r:(?,//1(x@)\)/*y))}[x].)/(!#x;())}
+cx:{?/:/(&I=x;y@'&'x=I@y)}   / connections
+dis:{*|(#*:)({(y^r;z,,(r:(?,//1(x@)\)/*y))}[x].)/(!#x;())} / disambiguate
 
 d:N@G:(=I)_0N
 g:dis'cx.'+(!d;.d)  / collect groups
