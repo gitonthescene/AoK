@@ -5,7 +5,7 @@ DS:+\D
 ef:DS 2 / end of February
 
 ly:{2!+/~4 100 400!/:\:x} / leap year [[https://nsl.com/k/training/idioms_K3.pdf]]
-lds:{(--)/--[4 100 400]!\:-x-1972} / leapdays since 1970 (excluding current year
+lds:{(--)/--[4 100 400]!\:-x-1972} / leapdays since 1970 (excluding current year)
 
 c:{c:+/1(!#:)\i:1|5!4-0 1 2 4 8'-16!-x+1
  c:-2_@[c;]\0
@@ -32,3 +32,11 @@ zi:{$[~"TZif"~4#x;`err"not timezone";!2=x[4];`err"vs 2 only"];i:20;
     r,:,0+x[i+!j:h`st];i+:j
     r,:,0+x[i+!j:h`us];i+j
     r}
+
+/ unix time
+ut:{s:S/2_x
+ s+:DS[x 1]*/1_S
+ s-:((x[1]>2)&~[ly x 0])*/1_S
+ s+:lds[x 0]*/1_S
+ s+:(x[0]-1970)*/365,1_S
+ s}
