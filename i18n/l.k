@@ -7,6 +7,11 @@ ef:DS 2 / end of February
 ly:{2!+/~4 100 400!/:\:x} / leap year [[https://nsl.com/k/training/idioms_K3.pdf]]
 lds:{(--)/--[4 100 400]!\:-x-1972} / leapdays since 1970 (excluding current year)
 
+ZD:"/usr/share/zoneinfo/"
+
+p:{s:1 -1"-"=x 19;@[;1 2;-;1]@[.'*+0N 2#(0,-1_+\,/(4,2+&7),\:1)_x,":";6;*;s]} / parse
+shw:{t:-1_"0"^,//+((-:4,2+&5)$'$6#x;"--T:::");t,:"+-"m:0>x[6];t,":"/"0"^-2$$(1 -1m;1)*x 6 7}
+
 c:{c:+/1(!#:)\i:1|5!4-0 1 2 4 8'-16!-x+1
  c:-2_@[c;]\0
  p:c_x
@@ -28,7 +33,7 @@ zi:{$[~"TZif"~4#x;`err"not timezone";!2=x[4];`err"vs 2 only"];i:20;
     r:,h:`us`st`lp`ti`ty`ch!h
     r,:,,/'`I$`B$'|''(h`ti;0N)#/:(0,8*h`ti)_x[i+!j:9*h`ti];i+:j
     ty:+,/'`I$`B$|''0 4 5_/:(h`ty;0N)#x[i+!j:6*h`ty]
-    r,:,+@[ty;0 2;(-/1(bits[32]*bits[31]<)\;ty[2]?)];i+:j
+    r,:,+@[ty;0 2;(-/1(bits[32]*bits[31]<)\;(@/1<:\?ty[2])?)];i+:j
     r,:,"\0"\-1_x[i+!j:h`ch];i+:j
     r,:,`I$`B$|''0N 8#/:0N 16#x[i+!j:16*h`lp];i+:j
     r,:,0+x[i+!j:h`st];i+:j
@@ -38,7 +43,7 @@ zi:{$[~"TZif"~4#x;`err"not timezone";!2=x[4];`err"vs 2 only"];i:20;
 / unix time
 ut:{s:S/2_x
  s+:DS[x 1]*/1_S
- s-:((x[1]>2)&~[ly x 0])*/1_S
+ s-:((x[1]>1)&~[ly x 0])*/1_S
  s+:lds[x 0]*/1_S
  s+:(x[0]-1970)*/365,1_S
  s}
