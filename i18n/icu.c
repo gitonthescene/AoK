@@ -14,6 +14,9 @@ V UK(K x,UChar* b,N n,I* s,UErrorCode* e){
   }
 }
 
+// [[https://unicode-org.github.io/icu/userguide/transforms/general/][Transforms]]
+// [[https://begriffs.com/posts/2019-05-23-unicode-icu.html]]
+
 K Ftrns(K x,K y){
   UErrorCode e=U_ZERO_ERROR;UParseError pe;
   N l=MAX(NK(x),NK(y));K r=KC(0,2*l);UChar b[l+1];I s;
