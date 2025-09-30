@@ -10,7 +10,7 @@ V UK(K x,UChar* b,N n,I* s,UErrorCode* e){
   N l=NK(x);C bc[l+1];CK(bc,x);bc[l]=0;
   u_strFromUTF8(b,n,s,bc,-1,e);
   if(U_FAILURE(*e)){
-	printf("no go: %s\n",bc);
+    printf("no go: %s\n",bc);
   }
 }
 
