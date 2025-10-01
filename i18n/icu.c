@@ -14,6 +14,8 @@ V UK(K x,UChar* b,N n,I* s,UErrorCode* e){
   }
 }
 
+// [[https://unicode-org.github.io/icu/userguide/collation/examples.html]]
+
 // [[https://unicode-org.github.io/icu/userguide/transforms/general/][Transforms]]
 // [[https://begriffs.com/posts/2019-05-23-unicode-icu.html]]
 
