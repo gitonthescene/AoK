@@ -11,10 +11,10 @@ S:"\n"\"Οδυσσευς - Odysseus
 Οδυσσεα - Odyssea
 Οδυσσευ - Odysseu"
 
-lts:,/l.c "αβγδεζηθικλμνξοπρστυφχψως"
+lts:l.u8d "αβγδεζηθικλμνξοπρστυφχψως"
 utf8:l.u8'lts
-idx:@[!#1+lts;24;:;lts?**l.c"σ"]
-nrm:25^idx lts?,/l.c iculow@
+idx:@[!#1+lts;24;:;lts?**l.u8d"σ"]
+nrm:25^idx lts?l.u8d iculow@
 
 T:nrm'I
 S:7#/:nrm'S
