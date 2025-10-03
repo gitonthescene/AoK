@@ -34,9 +34,7 @@ N:C!N
 
 sep:,/l.u8'32 215 32
 I:sep\'I
-#C:l.u8d''I
-i:0
-`0:I i
+C:l.u8d''I
 
 val:{r:R[d:x]
  $[0=#r;:0N;1=#r;:d]

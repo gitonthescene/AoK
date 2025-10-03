@@ -1,4 +1,5 @@
 `"libicu.dylib"2:(`loadicu;1);
+low:icutrans["NFC; Any-Lower"]
 
 \d l
 \l l.k
@@ -14,7 +15,7 @@ S:"\n"\"Οδυσσευς - Odysseus
 lts:l.u8d "αβγδεζηθικλμνξοπρστυφχψως"
 utf8:l.u8'lts
 idx:@[!#1+lts;24;:;lts?**l.u8d"σ"]
-nrm:25^idx lts?l.u8d iculow@
+nrm:25^idx lts?l.u8d low@
 
 T:nrm'I
 S:7#/:nrm'S
