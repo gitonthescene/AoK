@@ -22,8 +22,8 @@ u16:{,/u160 x}     /utf16 encode (big endian)
 u16l:{,/|'u160 x}  /utf16 encode (little endian)
 
 u16d0:{,/{$[1=#x;x;l.bits[16]+l.bits[10]/l.bits[10]!x]}'256/''256!_[-2_@[+/1(!#:)\1+~^0xdfd8?*'h;]\0;h:x]} /utf16 decode
-u16d:{$[~#x;:!0;~`C~ \@x;`err@"type"];u16d0 0N 2#x}     /utf16 decode (big endian)
-u16dl:{$[~#x;:!0;~`C~ \@x;`err@"type"];u16d0@|'0N 2#x}  /utf16 decode (little endian)
+u16d:{$[~#x;:!0;~`C~@x;`err@"type"];u16d0 0N 2#x}     /utf16 decode (big endian)
+u16dl:{$[~#x;:!0;~`C~@x;`err@"type"];u16d0@|'0N 2#x}  /utf16 decode (little endian)
 
 / parse zone info
 zi:{$[~"TZif"~4#x;`err"not timezone";!2=x[4];`err"vs 2 only"];i:20;

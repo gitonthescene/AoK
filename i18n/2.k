@@ -15,4 +15,4 @@ nrm:{t:@[+l.p'x;1 2;-;1] / 0-based months and days
   +@[d,1_a;0 1 2;+;(t 0;1;1)]}
 
 r:*&=/1|/\#'=nrm I
-l.shw[r,0 0]
+`0:l.shw[r,0 0]
