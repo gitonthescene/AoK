@@ -1,3 +1,4 @@
+."\\l ",`env[]`KINIT
 imp.ort[`l;"l.k"]
 
 (C;U;D):+"\t"\'-1_("#"=*:')_0:"CP437.TXT" / https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/PC/CP437.TXT
