@@ -1,3 +1,4 @@
+."\\l ",`env[]`KINIT
 imp.ort[`l;"l.k"]
 
 (I;Z):+"; "\'0:"19.txt"
