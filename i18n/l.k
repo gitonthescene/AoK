@@ -49,3 +49,14 @@ ut:{s:S/2_x
  s+:lds[x 0]*/1_S
  s+:(x[0]-1970)*/365,1_S
  s}
+
+/ unix time to tuple
+tp:{yr:1970+((-365*86400)!x)
+  yr-:-365!l:lds yr
+  (dys;hms):86400\(365*86400)!x-86400*l
+  dys+:(~ly yr)&~dys<ef
+  (m;mo):1 DS\DS'dys
+  d:dys-mo
+  (H;M;S):1_S\hms
+  +(yr;m;d;H;M;S)}
+
