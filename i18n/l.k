@@ -18,7 +18,9 @@ DS:+\D
 ef:DS 2 / end of February
 
 ly:{2!+/~4 100 400!/:\:x} / leap year [[https://nsl.com/k/training/idioms_K3.pdf]]
-lds:{(--)/--[4 100 400]!\:-x-1972} / leapdays since 1970 (excluding current year)
+lds0:{(--)/--[4 100 400]!\:-x} / leapdays since yr 0
+lds70:lds0 1970
+lds:{lds0[x]-lds70} / leapdays since 1970 (excluding current year)
 
 ZD:"/usr/share/zoneinfo/"
 
