@@ -54,7 +54,7 @@ ut:{s:S/2_x
 
 / unix time to tuple
 tp:{d:{(x-86400*l;l:y[1]&lds yr:1970+*t;t:(0;365*86400)\y 0)}[x]/(x:(),x;10000;0)
-  (yr;dys;hms):1970 0 0+'0 365 86400\d[0]+86400*a:d[1]-lds 1970+d[2;0]
+  (yr;dys;hms):1970 0 0+'0 365 86400\d[0]+86400*a:d[1]-lds 1970+d[2;0];a*:(ly yr|~x<0)
   dys+:-[a]+(~ly yr)&~dys<ef-1
   (m;mo):1 DS\DS'dys
   d:dys-mo
