@@ -1,13 +1,15 @@
 `"libicu.dylib"2:(`loadicu;1);
-low:icutrans["NFC; Any-Lower"]
-up:icutrans["NFC; Any-Upper"]
+trans:{(e;r):icutrans[x;y];$[e;`err"icutrans";r]}
+
+low:trans["NFC; Any-Lower"]
+up:trans["NFC; Any-Upper"]
 
 \d l
 \l l.k
 \d .
 
-strp:icutrans["NFD; [:Nonspacing Mark:] Remove; Any-Lower; NFC"]
-latin:icutrans["NFD; Any-Lower; Latin-ASCII ; NFC"]
+strp:trans["NFD; [:Nonspacing Mark:] Remove; Any-Lower; NFC"]
+latin:trans["NFD; Any-Lower; Latin-ASCII ; NFC"]
 
 (N;P):+": "\'0:"12.txt"
 (L;F):+", "\'N

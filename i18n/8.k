@@ -1,10 +1,11 @@
 `"libicu.dylib"2:(`loadicu;1);
+trans:{(e;r):icutrans[x;y];$[e;`err"icutrans";r]}
 
 \d l
 \l l.k
 \d .
 I:0:"8.txt"
-strp:icutrans["NFD; [:Nonspacing Mark:] Remove; NFC"]
+strp:trans["NFD; [:Nonspacing Mark:] Remove; NFC"]
 
 l:</4 13>\:#'c:l.u8d'I / length
 d:|/'</"0:">\:c    / digit

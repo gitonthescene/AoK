@@ -1,5 +1,7 @@
 `"libicu.dylib"2:(`loadicu;1);
-low:icutrans["NFC; Any-Lower"]
+trans:{(e;r):icutrans[x;y];$[e;`err"icutrans";r]}
+
+low:trans["NFC; Any-Lower"]
 
 \d l
 \l l.k
