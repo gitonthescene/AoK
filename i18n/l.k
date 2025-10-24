@@ -27,7 +27,7 @@ ZD:"/usr/share/zoneinfo/"
 p:{s:1 -1"-"=x 19;@[;1 2;-;1]@[.'*+0N 2#(0,-1_+\,/(4,2+&7),\:1)_x,":";6;*;s]} / parse
 shw:{x:@[x;1 2;+;1];t:-1_"0"^,//+((-:4,2+&5)$'$6#x;"--T:::");t,:"+-"m:0>x[6];t,":"/"0"^-2$$(1 -1m;1)*x 6 7}
 
-/ parse zone info
+/ parse zone info [[https://man7.org/linux/man-pages/man5/tzfile.5.html]]
 zi:{$[~"TZif"~4#x;`err"not timezone";!2=x[4];`err"vs 2 only"];i:20;
     h:,/`I$`B$|'0N 4#x[i+!j:24];i+:j
     r:,h:`us`st`lp`ti`ty`ch!h
