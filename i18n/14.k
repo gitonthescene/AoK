@@ -1,6 +1,5 @@
-\d l
-\l l.k
-\d .
+."\\l ",`env[]`KINIT
+imp.ort[`l;"l.k"]
 
 I:0:"14.txt"
 

@@ -1,6 +1,6 @@
-\d l
-\l l.k
-\d .
+."\\l ",`env[]`KINIT
+imp.ort[`l;"l.k"]
+
 I:"\n"\'"\n\n"\1:"6.txt"
 ct:+/(4=5!;2=3!)@\:!#I 0
 fx:{x{,/l.u8'l.u8d`c$l.u8d@x}/y}

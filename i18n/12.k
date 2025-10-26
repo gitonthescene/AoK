@@ -1,12 +1,11 @@
+."\\l ",`env[]`KINIT
+imp.ort[`l;"l.k"]
+
 `"libicu.dylib"2:(`loadicu;1);
 trans:{(e;r):icutrans[x;y];$[e;`err"icutrans";r]}
 
 low:trans["NFC; Any-Lower"]
 up:trans["NFC; Any-Upper"]
-
-\d l
-\l l.k
-\d .
 
 strp:trans["NFD; [:Nonspacing Mark:] Remove; Any-Lower; NFC"]
 latin:trans["NFD; Any-Lower; Latin-ASCII ; NFC"]

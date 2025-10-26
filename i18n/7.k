@@ -1,6 +1,5 @@
-\d l
-\l l.k
-\d .
+."\\l ",`env[]`KINIT
+imp.ort[`l;"l.k"]
 
 off:{-*x[2]@x[1;1]@x[1;0]'y}
 

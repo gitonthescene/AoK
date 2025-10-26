@@ -1,9 +1,9 @@
+."\\l ",`env[]`KINIT
+imp.ort[`l;"l.k"]
+
 `"libicu.dylib"2:(`loadicu;1);
 trans:{(e;r):icutrans[x;y];$[e;`err"icutrans";r]}
 
-\d l
-\l l.k
-\d .
 I:0:"8.txt"
 strp:trans["NFD; [:Nonspacing Mark:] Remove; NFC"]
 

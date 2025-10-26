@@ -1,7 +1,7 @@
+."\\l ",`env[]`KINIT
+imp.ort[`l;"l.k"]
+
 I:0:"2.txt"
-\d l
-\l l.k
-\d .
 
 nrm:{t:@[+l.p'x;1 2;-;1] / 0-based months and days
   tzo:60*0 60/-2#t

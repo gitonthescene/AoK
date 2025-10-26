@@ -1,8 +1,8 @@
+."\\l ",`env[]`KINIT
+imp.ort[`l;"l.k"]
+
 `"libbcrypt.dylib"2:(`loadbcrypt;1);
 `"libicu.dylib"2:(`loadicu;1);
-\d l
-\l l.k
-\d .
 
 trans:{(e;r):icutrans[x;y];$[e;`err"icutrans";r]}
 hash:{(e;r):bcrypthash@`[1;(x;y)];$[e;`err"bcrypthash:",$e;r]}

@@ -1,6 +1,5 @@
-\d l
-\l l.k
-\d .
+."\\l ",`env[]`KINIT
+imp.ort[`l;"l.k"]
 
 I:128169=l.u8d'0:"5.txt"
 D:-1_#'*:\I
