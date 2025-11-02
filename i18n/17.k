@@ -3,7 +3,6 @@ imp.ort[`l;"l.k"]
 
 I:.'"0x",/:0:"17.txt"
 
-/`0:I
 sh:-1_#'*:\
 
 / parts
@@ -17,8 +16,9 @@ hist:{`0:+@[;!0|/x]'"# "@&'x}
 / how much of incomplete utf8 encoding needed
 l:B.[;]/:'+'w:&'(1+|!16)</:/:B:b''256!P
 
-N:(4/'0N 8#{0^*-/(x;i)@\:&x>i:1+|!16}')'B
-H:4/''0N 8#/:(+/&\)''1=B
+p:&/#'P
+N:(4/'(0N;p)#{0^*-/(x;i)@\:&x>i:1+|!16}')'B
+H:4/''(0N;p)#/:(+/&\)''1=B
 
 / shave bogus stuff
 S:l.u8d''P{:[;y]_x}''|\''(1+|!16)</:/:b'256!P
@@ -29,7 +29,7 @@ right:&/'~^(l.u8d border)?(*|:)''S
 
 start:@[;0 2 1]@,/1((&right)^)\,/&'(top;bottom)&\:right
 
-r:31{n@<w@n:&~^w:*'(,/H x)?N}\start
+r:(-1+/top){n@<w@n:&~^w:*'(,/H x)?N}\start
 
 shw:" "/'$/|1(|/#',/)\+$@\:/1(!|/#:')\@'/1(&'#'[P]@)\
 shw@|r
